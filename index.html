@@ -495,7 +495,7 @@
 
         window.addEventListener("load", () => {
             console.log("sending to " + top.window);
-            top.window.postMessage(window, "*")
+            top.window.postMessage(JSON.parse(JSON.stringify(window)), "*")
         });
     </script>
 </body>
