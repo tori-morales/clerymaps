@@ -502,7 +502,7 @@
         window.addEventListener("message", (res) => {
             console.log(res);
             if ("deltaY" in res.data) {
-                window.scrollBy(0, res.data.deltaY);
+                window.scrollBy(0, res.data["deltaY"]);
             }
         })
     </script>
