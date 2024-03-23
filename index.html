@@ -495,7 +495,7 @@
 
 
         window.addEventListener("load", () => {
-            let mess = { "num": document.getElementById("story").getBoundingClientRect().height };
+            let mess = { num: document.getElementById("story").getBoundingClientRect().height };
             parent.postMessage(mess, "*")
             console.log(mess);
         });
