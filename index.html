@@ -494,7 +494,6 @@
         window.addEventListener('resize', () => { scroller.resize() });
 
         window.addEventListener("load", () => {
-            console.log("sending to " + top.window);
             parent.window.postMessage(document.getElementById("story").getBoundingClientRect().height, "*")
         });
     </script>
