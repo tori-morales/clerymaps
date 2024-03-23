@@ -488,7 +488,7 @@
             step: ".trigger",
             progress: true,
             threshold: 1,
-
+            debug: true,
         }).onStepEnter((res) => handleEnter(res)).onStepProgress((res) => { handleProgress(res) }).onStepExit((res) => { handleExit(res) });
 
         window.addEventListener('resize', () => { scroller.resize() });
