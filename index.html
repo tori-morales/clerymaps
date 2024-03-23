@@ -493,8 +493,11 @@
 
         window.addEventListener('resize', () => { scroller.resize() });
 
+
         window.addEventListener("load", () => {
-            parent.postMessage({ "num": document.getElementById("story").getBoundingClientRect().height }, "*")
+            let mess = { "num": document.getElementById("story").getBoundingClientRect().height };
+            parent.postMessage(mess, "*")
+            console.log(mess);
         });
     </script>
 </body>
