@@ -491,9 +491,12 @@
 
         }).onStepEnter((res) => handleEnter(res)).onStepProgress((res) => { handleProgress(res) }).onStepExit((res) => { handleExit(res) });
 
-        window.addEventListener('resize', () => { scroller.resize() })
+        window.addEventListener('resize', () => { scroller.resize() });
 
-        window.addEventListener("load", () => { top.window.postMessage(window, "*") });
+        window.addEventListener("load", () => {
+            console.log("sending to " + top.window);
+            top.window.postMessage(window, "*")
+        });
     </script>
 </body>
 
