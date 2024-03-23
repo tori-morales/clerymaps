@@ -499,6 +499,12 @@
             parent.postMessage(mess, "*")
             console.log(mess);
         });
+        window.addEventListener("message", (res) => {
+            console.log(res);
+            if ("deltaY" in res.data) {
+                window.scrollBy(0, deltaY)
+            }
+        })
     </script>
 </body>
 
