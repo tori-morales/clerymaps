@@ -495,7 +495,7 @@
 
         window.addEventListener("load", () => {
             console.log("sending to " + top.window);
-            parent.window.postMessage(JSON.stringify(window), "*")
+            parent.window.postMessage(document.getElementById("story").getBoundingClientRect().height, "*")
         });
     </script>
 </body>
