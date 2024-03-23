@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Alike&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+* {
+  font-family: "Alike", serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  margin: auto;
+  width: 800px;
+  height: 100vh;
+}
+
+#story {
+  background-color: white;
+  padding: 1em;
+  max-width: 100%;
+}
+
+#storytop {
+  padding: 1.5em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Domine", serif;
+}
+p {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.4em;
+  z-index: 10;
+  background-color: white;
+}
+
+#group1 {
+  background-color: white;
+  position: relative;
+}
+
+.paragraph {
+  position: relative;
+  z-index: 10;
+}
+
+#group2 {
+  position: relative;
+  top: -500%;
+  margin-top: 5em;
+  z-index: 10;
+  background-color: white;
+}
+
+#group2 h2 {
+  padding: 0.25em;
+  width: fit-content;
+  background-color: white;
+}
+
+#group2 p {
+  padding: 0.25em;
+  background-color: white;
+}
+
+#group3 p {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+  padding: 0.25em;
+}
+
+#group4 {
+  background-color: white;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.mapwrap {
+  height: 100vh;
+  max-height: 1200px;
+  border: none;
+  margin-top: 1em;
+  position: sticky;
+  z-index: 0;
+  top: 1px;
+}
+
+#emptyfull {
+  height: 80vh;
+  max-height: 600px;
+}
+
+#emptyhalf {
+  height: 40vh;
+  max-height: 400px;
+}
+
+#sidewalkstreetsidewalk {
+  display: flex;
+
+  grid-auto-flow: dense;
+}
+
+#sidewalkstreetsidewalk p {
+  margin-right: 1em;
+}
+
+#sidewalkstreetsidewalk svg {
+  position: relative;
+  margin: 0.5em;
+  min-width: 450px;
+}
+
+.caption p {
+  margin-top: 0.5em;
+  font-size: 0.85rem;
+  align-self: center;
+  text-align: center;
+  color: rgb(102, 102, 102);
+}

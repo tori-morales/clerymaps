@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Alike&display=swap");
+
+#map {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alike", serif;
+}
+
+.mapwrap {
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.active {
+  z-index: 100;
+  position: absolute;
+}
+
+#label {
+  margin: 0;
+  padding: 0;
+  font-size: 0.7em;
+  background-color: rgba(255, 255, 255, 0.638);
+  background-blend-mode: overlay;
+  font-weight: 500;
+}
+
+#key {
+  opacity: 0.9;
+  width: 10em;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  font-size: 1rem;
+  justify-items: left;
+  padding: 0.5em;
+  background-color: white;
+  border: 2px black solid;
+  top: 50%;
+  margin: 1em;
+}
+
+#key div {
+  display: flex;
+}
+
+#key div p {
+  margin-left: 0.1em;
+}
+
+svg {
+  margin: auto;
+}
+
+#nyubound {
+  stroke: #000;
+  stroke-miterlimit: 10;
+  fill: #9465c4;
+  opacity: 0.61;
+  stroke-width: 0.25px;
+}
+
+.mapwrap p {
+  font-size: 1em;
+  margin: auto;
+  text-align: left;
+}
+#cleryline {
+  fill: #6b8bc4;
+  stroke: #6b8bc5;
+  stroke-width: 0.5em;
+  stroke-miterlimit: 10;
+}
+
+#campusline {
+  fill: #4c167b;
+  stroke: #4c167b;
+  stroke-width: 0.5em;
+  stroke-miterlimit: 10;
+}

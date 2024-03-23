@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYU Clery Boundaries</title>
+  <link rel="stylesheet" href="mapstyles.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <div class="mapwrap">
+    <div id="map" style="width: 100%; height: 100%"></div>
+    <div id="key">
+      <div>
+        <svg width="1.5em" height="1em">
+          <rect id="nyubound" width="1.5em" height="1em" />
+        </svg>
+      </div>
+      <div>
+        <p>NYU Building</p>
+      </div>
+      <div>
+        <svg height=".25em" width="1.5em">
+          <line id="cleryline" x1="0" y1="0" x2="1.5em" y2="0" />
+        </svg>
+      </div>
+      <div>
+        <p>Clery Boundary</p>
+      </div>
+    </div>
+    <p id="label"></p>
+  </div>
+  <script>
+    function toTitleCase(str) {
+      return str.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      });
+    }
+
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoidG9yaW1vcmFsZXMiLCJhIjoiY2xnZmdqMXA5MDFlbzNmcTZ0MHI1NDJuMSJ9.E81absNdHImEsm3kaPLYjg";
+    const map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/torimorales/cls6tzn2602f501pf0py4gmpd",
+      center: [-73.992, 40.729],
+      zoom: 14.1,
+      bearing: 32.8,
+    });
+
+    map.on("load", () => {
+      map.on("mousemove", "nyubuildings", (e) => {
+        document.getElementById("label").innerHTML = toTitleCase(
+          e.features[0].properties.name
+        );
+        console.log(e);
+        document.getElementById("label").setAttribute("class", "active");
+        document.getElementById("label").style.left = e.point.x + 15 + "px";
+        document.getElementById("label").style.top = e.point.y - 10 + "px";
+      });
+    });
+
+    map.on("mouseleave", "nyubuildings", (e) => {
+      console.log(map.center);
+      document.getElementById("label").innerHTML = "";
+      document.getElementById("label").classList.remove("active");
+    });
+
+    map.scrollZoom.disable();
+  </script>
+</body>
+
+</html>

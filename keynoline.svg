@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.98 22.42">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #9465c4;
+        opacity: .61;
+        stroke-width: .25px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        stroke-width: .5px;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: .02em;
+      }
+
+      .cls-5 {
+        font-family: "Alike", serif;
+        font-size: 6.54px;
+        font-variation-settings: 'wght' 300, 'wdth' 100;
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <g id="keynoline">
+    <rect class="cls-2" x=".25" y=".25" width="78.48" height="21.92"/>
+    <rect class="cls-1" x="3.75" y="6.59" width="15.28" height="8.69"/>
+    <text class="cls-5" transform="translate(22.88 13.16) scale(1.16 1)"><tspan class="cls-4" x="0" y="0">N</tspan><tspan class="cls-3" x="4.71" y="0">Y</tspan><tspan x="7.93" y="0">U Building</tspan></text>
+  </g>
+</svg>
