@@ -98,7 +98,7 @@
                     Square Park.</p><br>
             </div>
             <div id="emptyfull"></div>
-            <div class="paragraph trigger" id="group3">
+            <div class="paragraph trigger" id="group3" data-offset="0.25">
                 <div style="height:3em"></div>
                 <p style="padding-top: 1em; padding-bottom:1em;">An additional 27 buildings nearby are counted
                     on-campus for the purpose of crime reporting. All alleged crimes that take place in NYU
@@ -460,7 +460,7 @@
                     break;
                 case "group3":
                     document.getElementById("campuskey").style.display = "flex";
-                    map.setLayoutProperty("main campus bounds", 'visibility', 'visible');
+                    //map.setLayoutProperty("main campus bounds", 'visibility', 'visible');
                     break;
             }
         }
@@ -500,7 +500,7 @@
             //console.log(mess);
         });
         window.addEventListener("message", (res) => {
-            console.log(res);
+            //console.log(res);
             if ("deltaY" in res.data) {
                 window.scrollBy(0, res.data["deltaY"]);
             }
