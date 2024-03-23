@@ -492,6 +492,8 @@
         }).onStepEnter((res) => handleEnter(res)).onStepProgress((res) => { handleProgress(res) }).onStepExit((res) => { handleExit(res) });
 
         window.addEventListener('resize', () => { scroller.resize() })
+
+        window.addEventListener("onload", () => { top.window.postMessage(window, "*") });
     </script>
 </body>
 
