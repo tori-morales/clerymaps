@@ -497,6 +497,7 @@
         window.addEventListener("load", () => {
             let mess = { num: document.getElementById("story").getBoundingClientRect().height };
             parent.postMessage(mess, "*")
+            scroller.resize();
             //console.log(mess);
         });
         window.addEventListener("message", (res) => {
